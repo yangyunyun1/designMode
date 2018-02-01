@@ -1,0 +1,6 @@
+INDEX VERSION 1.130+D:\source_code\basicLearn\designMode\.metadata\.plugins\org.eclipse.jdt.core
+3656176778.index
+1562095386.index
+21584346.index
+3874276692.index
+1091347983.index

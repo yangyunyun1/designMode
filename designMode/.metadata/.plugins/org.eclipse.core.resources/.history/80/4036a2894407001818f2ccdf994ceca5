@@ -1,0 +1,19 @@
+package DynamicProxy;
+
+import common.RealSubject;
+import common.Subject;
+import net.sf.cglib.proxy.Enhancer;
+
+public class CglibClient {
+	public static void main(String[] args) {
+		CglibDynamicProxy cglibProxy = new CglibDynamicProxy(); 
+		
+        Enhancer enhancer = new Enhancer();  
+        enhancer.setSuperclass(RealSubject.class);  
+        enhancer.setCallback(cglibProxy);  
+  
+        Subject Subject = (Subject)enhancer.create();  
+		//当接口改变的时候，只需修改接口和实现类，不需要修改代理类，但是要代理一个没有接口的类就歇菜了
+		subject.request();
+	}
+}

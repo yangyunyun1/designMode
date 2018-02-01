@@ -1,0 +1,16 @@
+package DynamicProxy;
+
+import net.sf.cglib.proxy.MethodInterceptor;  
+import net.sf.cglib.proxy.MethodProxy;  
+  
+import java.lang.reflect.Method; 
+
+public class CglibDynamicProxy implements MethodInterceptor{
+
+	@Override
+	public Object intercept(Object arg0, Method arg1, Object[] arg2, MethodProxy arg3) throws Throwable {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
