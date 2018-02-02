@@ -8,11 +8,12 @@ public class CglibClient {
 	public static void main(String[] args) {
 		CglibDynamicProxy cglibProxy = new CglibDynamicProxy(); 
 		
-        Enhancer enhancer = new Enhancer();  
-        enhancer.setSuperclass(RealSubject.class);  
-        enhancer.setCallback(cglibProxy);  
+//        Enhancer enhancer = new Enhancer();  
+//        enhancer.setSuperclass(RealSubject.class);  
+//        enhancer.setCallback(cglibProxy);  
   
-        Subject subject = (Subject)enhancer.create();  
+//       Subject subject = (Subject)enhancer.create(); 
+		Subject subject = (Subject) CglibDynamicProxy.getProxy(RealSubject.class, cglibProxy);
 
 		subject.request();
 	}
